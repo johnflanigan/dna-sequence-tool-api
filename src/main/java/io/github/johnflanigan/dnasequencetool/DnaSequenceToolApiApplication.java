@@ -1,4 +1,4 @@
-package io.github.johnflanigan.dnasequencetoolapi;
+package io.github.johnflanigan.dnasequencetool;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
