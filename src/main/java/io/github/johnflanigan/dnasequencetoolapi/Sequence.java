@@ -1,4 +1,4 @@
-package io.github.johnflanigan.dnasequencetool;
+package io.github.johnflanigan.dnasequencetoolapi;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

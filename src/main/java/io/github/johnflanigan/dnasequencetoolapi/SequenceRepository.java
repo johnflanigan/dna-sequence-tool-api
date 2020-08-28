@@ -1,4 +1,4 @@
-package io.github.johnflanigan.dnasequencetool;
+package io.github.johnflanigan.dnasequencetoolapi;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package io.github.johnflanigan.dnasequencetool;
+package io.github.johnflanigan.dnasequencetoolapi;
 
 public class SequenceNotFoundException extends RuntimeException {
 

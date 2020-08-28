@@ -1,4 +1,4 @@
-package io.github.johnflanigan.dnasequencetool;
+package io.github.johnflanigan.dnasequencetoolapi;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
