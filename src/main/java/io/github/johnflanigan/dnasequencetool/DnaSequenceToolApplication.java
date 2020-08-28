@@ -4,10 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DnaSequenceToolApiApplication {
+public class DnaSequenceToolApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DnaSequenceToolApiApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(DnaSequenceToolApplication.class, args);
+    }
 }

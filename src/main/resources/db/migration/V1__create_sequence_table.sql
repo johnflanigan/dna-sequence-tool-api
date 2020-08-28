@@ -1,6 +1,6 @@
 CREATE TABLE sequence (
-    id INT,
-    name VARCHAR,
-    description VARCHAR,
-    sequence VARCHAR
+    id SERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR NOT NULL,
+    description VARCHAR NOT NULL,
+    sequence VARCHAR NOT NULL
 );
