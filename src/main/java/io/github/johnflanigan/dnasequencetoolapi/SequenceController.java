@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class SequenceController {
@@ -26,7 +27,13 @@ public class SequenceController {
     @CrossOrigin(origins = {"http://localhost:3000", "https://dna-sequence-tool.herokuapp.com/"})
     @PostMapping("/sequences")
     Sequence newSequence(@RequestBody Sequence newSequence) {
-        return repository.save(newSequence);
+        Optional<Sequence> sequenceOptional = repository.findFirstBySequence(newSequence.getSequence());
+
+        if (sequenceOptional.isPresent()) {
+            throw new DuplicateSequenceException(sequenceOptional.get());
+        } else {
+            return repository.save(newSequence);
+        }
     }
 
     @GetMapping("/sequences/{id}")

@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
-public class SequenceNotFoundAdvice {
+public class DuplicateSequenceAdvice {
 
     @ResponseBody
-    @ExceptionHandler(SequenceNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    String sequenceNotFoundHandler(SequenceNotFoundException ex) {
+    @ExceptionHandler(DuplicateSequenceException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    String duplicateSequenceHandler(DuplicateSequenceException ex) {
         return ex.getMessage();
     }
 }
