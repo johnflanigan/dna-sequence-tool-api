@@ -17,11 +17,13 @@ public class SequenceController {
         this.repository = repository;
     }
 
+    @CrossOrigin(origins = {"http://localhost:3000", "https://dna-sequence-tool.herokuapp.com/"})
     @GetMapping("/sequences")
     List<Sequence> all() {
         return repository.findAll();
     }
 
+    @CrossOrigin(origins = {"http://localhost:3000", "https://dna-sequence-tool.herokuapp.com/"})
     @PostMapping("/sequences")
     Sequence newSequence(@RequestBody Sequence newSequence) {
         return repository.save(newSequence);
